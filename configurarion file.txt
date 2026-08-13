@@ -1,0 +1,29 @@
+sudo mkdir -p /var/www/eden.com/eden
+sudo chown -R $USER:$USER /var/www/eden.com/eden
+sudo chmod -R 755 /var/www/eden.com
+
+
+
+sudo vi /var/www/://eden.com
+
+
+sudo vi /etc/nginx/sites-available/eden.com
+
+
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name eden.com www.eden.com;
+
+    root /var/www/eden.com/eden;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
+
+
+sudo ln -s /etc/nginx/sites-available/eden.com /etc/nginx/sites-enabled/

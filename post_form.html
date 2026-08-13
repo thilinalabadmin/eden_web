@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mt Eden Heads Up</title>
+  <!-- Stylesheet file -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Font type for the navbar. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="crime.html">Crime</a></li>
+        <li><a href="lost_property.html">Lost Property</a></li>
+        <li><a class="active" href="post_form.html">Post Form</a></li>
+        <li><a href="login.html">Log in</a></li>
+      </ul>
+  </nav>
+ 
+  <header>
+    <!-- Banner -->
+    <div class="bannerContent">
+      <!-- Title -->
+      <h1> Mt Eden Heads Up</h1>
+    </div>
+  </header>
+
+  
+  <h1 class="postTitle">Post Form</h1>
+
+    
+  <!--Questions-->
+  <div class="container">
+    <form id="postForm">
+      <div class="postInputs">
+        <h3 id="postTitleQ">Title</h3>
+        <input type="text" id="title" placeholder="Enter a title for your post.">
+        <p class="error" id="errorTitle"></p>
+
+        <!--Post type question-->
+        <h3 id="postTypeQ">Post Type</h3>
+        <label class="postType">
+        <input type="radio" name="type" value="Crime">
+        Crime
+        </label>
+    
+        <label class="postType">
+          <input type="radio" name="type" value="Lost Property">
+          Lost Property
+        </label>
+
+        <!--Error correction-->
+        <p class="error" id="errorPostType"></p>
+
+        <!-- Input for address-->
+        <h3 id="postAddressQ">Address</h3>
+        <input type="text" id="address" placeholder="Enter address" >
+        <p class="error" id="errorAddress"></p>
+        <p class="info">*Please do not enter street/house numbers due to privacy!</p>
+
+        <h3 id="postDateQ">Date of Incident</h3>
+        <input type="date" id="incidentDate"> 
+        <p class="error" id="errorDate"></p>
+
+        <h3 Id="postDescriptQ">Description</h3> 
+        <textarea id="description" rows="5" placeholder="Enter a description" maxLength="400"></textarea>
+        <p id="counter">0/400</p>
+        <p class="info"> *Do not enter names or any exact addresses but specify near where if the street entered for location is very broad</p>
+        <p class="example">(Eg: My e-bike was stolen from the bustop in front of countdown. The bike lock was cut etc.)</p>
+        <p class="error" id="errorDescription"></p>
+
+        <label>
+          <input type="checkbox" name="checkbox" value="check" />
+          <a  href="Post Guidelines.pdf" class="postGuidelines">I agree to the post guidelines</a>
+        </label>
+          <p class="error" id="errorCheckBox"></P>
+            
+        <button class="postSubmit" type="submit">Submit Form</button>
+    </div>
+    </form>
+    </div>
+
+
+
+  <footer>
+    <div class="leftLinks">
+      <a href="index.html">Home</a>
+      <a href="crime.html">Crime</a>
+      <a href="lost_property.html">Lost Property</a>
+      <a href="post_form.html">Post Form</a>
+      <a href="login.html">Login</a>
+      <a href="sign_up.html">Sign Up</a>
+    
+    </div>
+    <div class="rightLinks">
+      <a href="mailto:23578@apps.eggs.school.nz">Email: 23578@apps.eggs.school.nz</a>
+      <a href="tel:+02040391023">Contact: +64 2040391023</a>
+      <a href="https://play.google.com/store/apps?hl=en_NZ">Download the app</a>
+      <a href="Privacy policy.pdf">Privacy Policy</a>
+
+    </div>
+  </footer>
+
+    
+ 
+  <!-- JavaScript file -->
+  <script src="post_form.js"></script>
+</body>
+</html>
+
